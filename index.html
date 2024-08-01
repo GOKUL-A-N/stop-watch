@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+                background: url(./assets/images/Background.png) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+        }
+        .container{
+            background-color: rgba(0, 0, 0, 0.25);
+            
+        }
+        .text-color{
+            color: rgba(214, 214, 214, 0.55);
+        }
+    </style>
+</head>
+<body class="h-screen w-full flex items-center justify-center">
+        <div class=" w-[400px] rounded-2xl container flex flex-col gap-3 p-3" >
+            <h1 class="p-2 text-center text-[25px] font-bold text-white">Stop Watch</h1>
+            <div>
+                <div class="h-2/3 w-full flex items-center justify-around font-semibold">
+                    <h1 class="text-color"><span id="hr" class="text-white font-bold text-[55px]"></span> hr</h1>
+                    <h1 class="text-color"><span id="min" class="text-white font-bold text-[55px]"></span>min</h1>
+                    <h1 class="text-color"><span id="sec" class="text-white font-bold text-[55px]"></span>sec</h1>
+                </div>
+                <div class="h-1/3 flex flex-row items-center justify-around">
+                    <button class="container pl-2 pr-2 pt-1 pb-1 w-auto rounded-md font-semibold text-white" id="start">Start</button>
+                    <button class="container pl-2 pr-2 pt-1 pb-1 w-auto rounded-md font-semibold text-white" id="lap">Lap</button>
+                    <button class="container pl-2 pr-2 pt-1 pb-1 w-auto rounded-md font-semibold text-white" id="stop">Stop</button>
+                    <button class="container pl-2 pr-2 pt-1 pb-1 w-auto rounded-md font-semibold text-white" id="reset">Reset</button>
+                </div>
+            </div>
+            <ul class="list-none flex items-center justify-center text-white font-semibold flex-col gap-2 text-[25px]" id="lapList">
+
+            </ul>
+        </div>
+        <script src="./js/index.js"></script>
+</body>
+</html>
